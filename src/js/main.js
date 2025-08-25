@@ -56,7 +56,6 @@ async function displayMenu(data) {
         const ingredients = document.createElement("p");
         const price = document.createElement("p");
         price.classList.add("price");
-        const btnDiv = document.createElement("div");
 
         //set content for elements from data
         name.textContent = dish.name;
@@ -67,7 +66,6 @@ async function displayMenu(data) {
         dishBox.appendChild(name);
         dishBox.appendChild(ingredients);
         dishBox.appendChild(price);
-        dishBox.appendChild(btnDiv);
 
         menu.appendChild(dishBox);
     });
