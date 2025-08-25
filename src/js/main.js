@@ -3,11 +3,26 @@
 window.onload = init;
 
 const menu = document.getElementById("menu");
+//opening/closing nav-menu
+let header = document.querySelector("header");
+let navMenuEl = document.getElementById("nav-menu");
+let openBtn = document.getElementById("open-menu");
+let closeBtn = document.getElementById("close-menu");
+
 
 function init() {
     if (menu) {
         fetchPosts();
     }
+}
+
+//eventlisteners
+openBtn.addEventListener('click', toggleMenu);
+closeBtn.addEventListener('click', toggleMenu);
+
+function toggleMenu() {
+    header.classList.toggle("menu-open");
+    navMenuEl.classList.toggle("active");
 }
 
 //fetch posts from API
