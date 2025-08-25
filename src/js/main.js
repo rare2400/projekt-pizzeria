@@ -39,7 +39,7 @@ async function fetchMenu() {
     }
 }
 
-//display fetched posts from API
+//display fetched dishes from API
 async function displayMenu(data) {
     menu.innerHTML = "";
     
