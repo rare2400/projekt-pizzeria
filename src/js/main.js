@@ -12,7 +12,7 @@ let closeBtn = document.getElementById("close-menu");
 
 function init() {
     if (menu) {
-        fetchPosts();
+        fetchMenu();
     }
 }
 
@@ -25,14 +25,14 @@ function toggleMenu() {
     navMenuEl.classList.toggle("active");
 }
 
-//fetch posts from API
-async function fetchPosts() {
+//fetch menu from API
+async function fetchMenu() {
     try {
         const response = await fetch("http://127.0.0.1:3000/api/menu")
 
         if (response.ok) {
             const data = await response.json();
-            displayPosts(data);
+            displayMenu(data);
         }
     } catch (error) {
         console.log("Error fetching data:", error);
@@ -40,7 +40,7 @@ async function fetchPosts() {
 }
 
 //display fetched posts from API
-async function displayPosts(data) {
+async function displayMenu(data) {
     menu.innerHTML = "";
     
     if(data.length === 0) {
