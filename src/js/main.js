@@ -44,7 +44,7 @@ async function displayMenu(data) {
     menu.innerHTML = "";
     
     if(data.length === 0) {
-        menu.textContent = "Det finns inga inlägg att visa";
+        menu.textContent = "Det finns ingen meny att visa";
         return;
     }
 
