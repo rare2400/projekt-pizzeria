@@ -4,20 +4,24 @@
 header {
     background-color: abstracts.$header-color;
     color: abstracts.$light-text;
-    padding: 1rem 0.2rem;
 }
 
 footer {
     @extend header;
     background-color: abstracts.$red;
     text-align: center;
+    padding: 1rem 0.2rem;
 }
 
 .h-container {
-    @include abstracts.grid(3rem, 2);
+    @include abstracts.grid(100%, 2);
     align-items: center;
     max-width: 50em;
     margin: 0 auto;
+}
+
+.logo {
+    margin: 0.1em 0;
 }
 
 /* navigation */
