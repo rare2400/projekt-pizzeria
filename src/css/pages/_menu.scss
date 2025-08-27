@@ -36,4 +36,8 @@
         @include abstracts.grid(100%, 2);
     }
 
+    .price {
+        text-align: right;
+    }
+
 }
