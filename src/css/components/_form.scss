@@ -14,8 +14,9 @@ form {
         height: 2rem;
         padding: 1rem;
         margin: 0.5rem auto 1rem;
-        border: 1px solid abstracts.$shadow;
+        border: 1px solid abstracts.$white;
         width: 100%;
+        box-shadow: 0px 0px 5px 0px abstracts.$shadow inset
     }
 
     textarea {
