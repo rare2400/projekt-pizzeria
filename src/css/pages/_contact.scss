@@ -1,0 +1,34 @@
+@use "../abstracts";
+
+.info {
+    @include abstracts.textBox(90%, 1rem, 1rem auto, 0px 0px 8px 0px abstracts.$shadow, false);
+    background-color: abstracts.$white;
+
+    #contact,
+    #opening-hours {
+        margin: 0 1rem;
+    }
+
+    p {
+        margin: 0.5rem 1rem 1rem;
+    }
+}
+
+.form-div {
+    @include abstracts.textBox(90%, 1rem, 1rem auto, 0px 0px 8px 0px abstracts.$shadow, false);
+    background-color: abstracts.$white;
+
+    p {
+        margin: 1rem;
+    }
+}
+
+@media (min-width: 50rem) {
+    .info {
+        @include abstracts.grid(100%, 2);
+
+        p {
+            margin: 0.8rem 0.5rem;
+        }
+    }
+}
