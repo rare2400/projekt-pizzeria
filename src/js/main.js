@@ -52,8 +52,11 @@ async function displayMenu(data) {
     data.forEach(dish => {
         const dishBox = document.createElement("div");
         dishBox.classList.add("dish-box");
-        const name = document.createElement("h3");
+        const name = document.createElement("h2");
+        const ingrAndPrice = document.createElement("div");
+        ingrAndPrice.classList.add("ingr-and-price");
         const ingredients = document.createElement("p");
+        ingredients.classList.add("ingredients");
         const price = document.createElement("p");
         price.classList.add("price");
 
@@ -64,8 +67,9 @@ async function displayMenu(data) {
 
         //put the elements together
         dishBox.appendChild(name);
-        dishBox.appendChild(ingredients);
-        dishBox.appendChild(price);
+        ingrAndPrice.appendChild(ingredients);
+        ingrAndPrice.appendChild(price);
+        dishBox.appendChild(ingrAndPrice);
 
         menu.appendChild(dishBox);
     });
