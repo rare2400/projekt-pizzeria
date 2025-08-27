@@ -1,0 +1,39 @@
+@use "../abstracts";
+
+#menu-container {
+    @include abstracts.textBox(90%, 1em, 1rem auto 3rem, 0px 0px 10px 0px abstracts.$shadow, false);
+    background-color: abstracts.$white;
+    border-radius: 10px;
+}
+
+#filter-container {
+    @include abstracts.grid(100%, 2);
+    margin-top: 1em;
+
+    label {
+        margin-left: 1em;
+    }
+
+    select {
+        padding: 0.3rem;
+        margin: 0 auto 1rem;
+        border: 1px solid abstracts.$shadow;
+        width: 50%;
+        border-radius: 10px
+    }
+}
+
+.dish-box {
+    @include abstracts.textBox(90%, 0.8rem 2rem, 0 auto 0.5em);
+    box-shadow: 0px 0px 5px 0px abstracts.$shadow inset;
+
+    h2 {
+        text-align: left;
+        margin-bottom: 0.2em;
+    }
+
+    .ingr-and-price {
+        @include abstracts.grid(100%, 2);
+    }
+
+}
