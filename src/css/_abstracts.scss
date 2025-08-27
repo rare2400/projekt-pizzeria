@@ -32,6 +32,7 @@ $font-stack: 'Arial', sans-serif;
     margin: $margin;
     padding: $padding;
     box-shadow: $box-shadow;
+    border-radius: 10px;
 
     @if $border !=0 {
         border: $border;
