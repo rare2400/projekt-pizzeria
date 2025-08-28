@@ -1,0 +1,84 @@
+@use "../abstracts";
+
+//bild för hero-section
+#hero-section {
+    margin: 0;
+    background-image: url("../images/pizza.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+//container för rubrik, text och cta-knappar
+#index-container {
+    @include abstracts.textBox(90%, 1rem, 1rem auto 3rem, 0px 0px 10px 0px abstracts.$shadow, false);
+    background-color: rgba(0, 0, 0, 0.503);
+    text-align: center;
+
+    h1 {
+        text-shadow:
+            0 0 5px #000,
+            0 0 10px #000,
+            0 0 20px #000,
+            0 0 40px #000;
+        margin-bottom: 1rem;
+        line-height: 2.5rem;
+        font-size: 1.8rem;
+    }
+
+    p {
+        color: abstracts.$light-text;
+    }
+}
+
+//kartan
+.map-wrapper {
+    text-align: center;
+    margin: 1rem auto;
+}
+
+#map {
+    @include abstracts.textBox(90%, 0, 0.5rem auto 0, 0px 0px 10px 0px abstracts.$shadow, none);
+}
+
+//footer
+#index-info {
+    background-color: abstracts.$red;
+    box-shadow: none;
+    margin: 0 auto;
+    padding: 0.2rem;
+
+    h2 {
+        color: abstracts.$light-text;
+        text-shadow: -1px 0px 2px rgba(0, 0, 0, 0.6);
+    }
+
+    a {
+        color: abstracts.$light-text;
+        text-decoration: none;
+
+        &:hover {
+            @extend %hoverLink;
+        }
+    }
+}
+
+
+@media (min-width: 50rem) {
+    #hero-section {
+        height: 50vh;
+    }
+
+    #index-container {
+        max-width: 50rem;
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+    }
+}
