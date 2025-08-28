@@ -8,3 +8,11 @@
         box-shadow: 0px 0px 4px 0px abstracts.$shadow;
     }
 }
+
+//cta-button
+.link-btn {
+    display: block;
+    @include abstracts.button(abstracts.$red, abstracts.$light-text, 40%, 2rem, 1rem auto, 100%, center, 1rem, false);
+    align-content: center;
+    text-decoration: none;
+}
