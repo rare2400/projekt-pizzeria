@@ -14,9 +14,18 @@ form {
         height: 2rem;
         padding: 1rem;
         margin: 0.5rem auto 1rem;
-        border: 1px solid abstracts.$white;
+        border: none;
         width: 100%;
         box-shadow: 0px 0px 5px 0px abstracts.$shadow inset
+    }
+
+    #number-checkbox {
+        margin: 0.5rem 0.8rem 1rem 0;
+    }
+
+    #phone-wrapper {
+        display: none;
+        margin-bottom: -1rem;
     }
 
     textarea {
