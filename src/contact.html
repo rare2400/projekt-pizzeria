@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/main.scss">
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
     <script src="js/main.js" defer></script>
+    <script src="js/contact.js" defer></script>
     <title>Kontakt</title>
 </head>
 
@@ -17,7 +18,7 @@
     <header>
         <div class="h-container">
             <a href="index.html"><img src="images/logo.png" alt="Mörk logotyp med vit text för pizzeria venedig"
-                        height="65" class="logo"></a>
+                    height="65" class="logo"></a>
             <nav id="nav-menu">
                 <ul>
                     <li><a href="index.html">Startsida</a></li>
@@ -48,12 +49,12 @@
                 <div id="contact">
                     <h2>Information</h2>
                     <p>Telefon: 012-345 67 89</p>
-                    <p>Adress: Venedigvägen 2, 123 45 Venedig</p>
+                    <p>Adress: Södra kaserngatan 14,<br> 291 53 Kristianstad</p>
                 </div>
 
                 <div id="opening-hours">
                     <h2>Öppettider</h2>
-                    <p>Måndag - Fredag: 11:00 - 21:00</p>
+                    <p>Måndag - Fredag: 10:00 - 21:00</p>
                     <p>Lördag: 11:30 - 23:00</p>
                     <p>Söndag: 12:00 - 21:00</p>
                 </div>
@@ -61,14 +62,26 @@
 
             <div class="form-div">
                 <h3>Kontakta oss</h3>
-                <p>Har du en fråga till oss? Fyll i formuläret nedan eller skicka ett mail till oss så svarar vi så fort
-                    vi
-                    kan.</p>
+                <p class="ingress">Har du en fråga till oss? Fyll i formuläret nedan eller skicka ett mail till oss så svarar vi så fort
+                    vi kan. Du kan välja mellan att vi svarar dig via e-post eller att vi ringer upp dig på angivet
+                    telefonnummer.</p>
+                <p id="error-msg"></p>
                 <form action="post" id="contact-form">
                     <label for="name">Namn:</label>
                     <input type="text" id="name" name="name" class="input-text">
                     <label for="email">E-post:</label>
                     <input type="email" id="email" name="email" class="input-text">
+
+                    <label>
+                        <input type="checkbox" id="number-checkbox">Ska vi ringa upp dig?
+                    </label>
+
+                    <div id="phone-wrapper">
+                        <label for="phoneNr">Telefonnummer</label>
+                        <input type="tel" name="phoneNr" id="phoneNr" class="input-text">
+                    </div>
+
+                    <br>
                     <label for="message">Meddelande:</label>
                     <textarea id="message" name="message"></textarea>
 
