@@ -3,16 +3,22 @@
 window.onload = init;
 
 const menu = document.getElementById("menu");
+const filter = document.getElementById("filter");
 //opening/closing nav-menu
 let header = document.querySelector("header");
 let navMenuEl = document.getElementById("nav-menu");
 let openBtn = document.getElementById("open-menu");
 let closeBtn = document.getElementById("close-menu");
 
+let dishes = [];
 
 function init() {
     if (menu) {
         fetchMenu();
+    }
+
+    if (filter) {
+        filter.addEventListener("change", applyFilter);
     }
 }
 
@@ -36,6 +42,18 @@ async function fetchMenu() {
         }
     } catch (error) {
         console.log("Error fetching data:", error);
+    }
+}
+
+//apply filter to menu
+function applyFilter() {
+    const filterValue = filter.value;
+
+    if (filterValue === "") {
+        displayMenu(dishes);
+    } else {
+        const filteredDishes = dishes.filter(dish => dish.category === filterValue);
+        displayMenu(filteredDishes);
     }
 }
 
