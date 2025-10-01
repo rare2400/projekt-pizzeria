@@ -4,8 +4,8 @@
     @include abstracts.textBox(90%, 1rem, 1rem auto, 0px 0px 8px 0px abstracts.$shadow, false);
     background-color: abstracts.$white;
 
-    #contact,
-    #opening-hours {
+    .contact,
+    .opening-hours {
         margin: 0 1rem;
     }
 
