@@ -7,17 +7,20 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 40vh;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 //container för rubrik, text och cta-knappar
 #index-container {
     @include abstracts.textBox(90%, 1rem, 1rem auto 3rem, 0px 0px 10px 0px abstracts.$shadow, false);
     background-color: rgba(0, 0, 0, 0.503);
+    font-size: 0.8em;
     text-align: center;
+    position: relative;
 
     h1 {
         text-shadow:
@@ -70,7 +73,7 @@
 
 @media (min-width: 50rem) {
     #hero-section {
-        height: 50vh;
+        height: 60vh;
     }
 
     #index-container {
