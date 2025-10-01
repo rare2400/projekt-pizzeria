@@ -4,15 +4,19 @@
     text-align: center;
 
     .btn {
-        @include abstracts.button(abstracts.$green, abstracts.$light-text, 70%, 3rem, 2em auto 0, 100%, center, 1rem, false);
+        @include abstracts.button(abstracts.$green, abstracts.$light-text, 70%, 3rem, 2em auto 0, 15rem, center, 1rem, false);
         box-shadow: 0px 0px 4px 0px abstracts.$shadow;
+
+        &:hover {
+            background-color: darken(abstracts.$green, 15%);
+        }
     }
 }
 
 //cta-button
 .link-btn {
     display: block;
-    @include abstracts.button(abstracts.$red, abstracts.$light-text, 40%, 1.5rem, 0.8rem auto, 100%, center, 0.8rem, false);
+    @include abstracts.button(abstracts.$red, abstracts.$light-text, 40%, 1.5rem, 0.8rem auto, 15rem, center, 0.8rem, false);
     align-content: center;
     text-decoration: none;
 }
@@ -21,6 +25,6 @@
     .link-btn {
         font-size: 1rem;
         margin: 1rem auto;
-        height: 1.8rem;
+        height: 2rem;
     }
 }
