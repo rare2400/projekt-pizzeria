@@ -12,7 +12,15 @@
 //cta-button
 .link-btn {
     display: block;
-    @include abstracts.button(abstracts.$red, abstracts.$light-text, 40%, 2rem, 1rem auto, 100%, center, 1rem, false);
+    @include abstracts.button(abstracts.$red, abstracts.$light-text, 40%, 1.5rem, 0.8rem auto, 100%, center, 0.8rem, false);
     align-content: center;
     text-decoration: none;
+}
+
+@media (min-width: 50rem) {
+    .link-btn {
+        font-size: 1rem;
+        margin: 1rem auto;
+        height: 1.8rem;
+    }
 }
