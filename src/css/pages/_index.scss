@@ -1,7 +1,7 @@
 @use "../abstracts";
 
 //bild för hero-section
-#hero-section {
+.hero-section {
     margin: 0;
     background-image: url("../images/pizza.png");
     background-size: cover;
@@ -15,7 +15,7 @@
 }
 
 //container för rubrik, text och cta-knappar
-#index-container {
+.index-container {
     @include abstracts.textBox(90%, 1rem, 1rem auto 3rem, 0px 0px 10px 0px abstracts.$shadow, false);
     background-color: rgba(0, 0, 0, 0.503);
     text-align: center;
@@ -88,11 +88,11 @@
 }
 
 @media (min-width: 50rem) {
-    #hero-section {
+    .hero-section {
         height: 60vh;
     }
 
-    #index-container {
+    .index-container {
         max-width: 50rem;
 
         h1 {
