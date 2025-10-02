@@ -1,0 +1,13 @@
+@use "../abstracts";
+
+.about-section {
+    margin: 2rem auto;
+}
+
+
+@media (min-width: 50rem) {
+    .about-image {
+        @include abstracts.grid(100%, 2);
+    }
+}
+
