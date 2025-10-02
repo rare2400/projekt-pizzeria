@@ -18,34 +18,31 @@
 #index-container {
     @include abstracts.textBox(90%, 1rem, 1rem auto 3rem, 0px 0px 10px 0px abstracts.$shadow, false);
     background-color: rgba(0, 0, 0, 0.503);
-    font-size: 0.8em;
     text-align: center;
     position: relative;
 
     h1 {
-        text-shadow:
-            0 0 5px #000,
-            0 0 10px #000,
-            0 0 20px #000,
-            0 0 40px #000;
+        @extend %textShadow;
+        color: lighten(abstracts.$green, 10%);
         margin-bottom: 1rem;
         line-height: 2.5rem;
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     p {
         color: abstracts.$light-text;
+        @extend %textShadow;
     }
 }
 
 //kartan
 .map-wrapper {
     text-align: center;
-    margin: 1rem auto;
+    margin: 1.8rem auto;
 }
 
 #map {
-    @include abstracts.textBox(90%, 0, 0.5rem auto 0, 0px 0px 10px 0px abstracts.$shadow, none);
+    @include abstracts.textBox(100%, 0, 0.5rem auto 0, 0px 0px 10px 0px abstracts.$shadow, none);
 }
 
 //footer
@@ -70,6 +67,25 @@
     }
 }
 
+.about-box {
+    margin: 2rem auto;
+
+    p {
+        font-family: abstracts.$heading-font;
+        text-align: center;
+        margin: 0 auto 1rem;
+        width: 80%;
+    }
+}
+
+.image-wrapper {
+    text-align: center;
+    width: 100%;
+
+    img {
+        width: 90%;
+    }
+}
 
 @media (min-width: 50rem) {
     #hero-section {
@@ -83,5 +99,35 @@
             font-size: 2.5rem;
         }
 
+        p {
+            font-size: 1.2rem;
+        }
+
     }
+
+    .about-box {
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        p {
+            margin: 0.7rem auto 1rem;
+            font-size: 1.5rem;
+            line-height: 2rem
+        }
+    }
+
+    .image-wrapper {
+        @include abstracts.grid(100%, 3);
+
+        img {
+            width: 96%;
+
+            &:hover {
+                transform: scale(1.1);
+                transition: transform 0.3s ease-in-out;
+            }
+        }
+    }
+
 }
