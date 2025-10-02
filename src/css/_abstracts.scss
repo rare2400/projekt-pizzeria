@@ -19,6 +19,14 @@ $heading-font: "Chewy", system-ui;
     text-decoration: underline;
 }
 
+%textShadow {
+    text-shadow:
+        0 0 5px #000,
+        0 0 10px #000,
+        0 0 20px #000,
+        0 0 40px #000;
+}
+
 /* mixins */
 //mixin för grid
 @mixin grid ($height, $columns: 2) {
@@ -46,7 +54,7 @@ $heading-font: "Chewy", system-ui;
 
 //mixin för knappar
 @mixin button($bg-color, $text-color, $witdth, $height, $margin, $max-w, $textalign, $fontsize, $border: false) {
-    @if $border == false {
+    @if $border ==false {
         background-color: $bg-color;
         color: $text-color;
         border: none;
