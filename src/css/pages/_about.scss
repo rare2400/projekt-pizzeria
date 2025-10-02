@@ -1,13 +1,64 @@
 @use "../abstracts";
 
+#about-container {
+    @include abstracts.textBox(90%, 1em, 1rem auto 2rem, 0px 0px 10px 0px abstracts.$shadow, false);
+}
+
+#about-hero {
+    height: 30vh;
+
+    div {
+        padding: 0.5rem;
+        max-width: 500px;
+    }
+}
+
 .about-section {
-    margin: 2rem auto;
+    margin: 1.5rem auto;
+}
+
+.about-image {
+    margin: 0 auto;
+
+
+    #pizzaimg {
+        text-align: center;
+    }
+
+    #about-pizza {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+
+#sign {
+    text-align: center;
+    font-style: italic;
+    margin: 1.5rem auto 0;
 }
 
 
 @media (min-width: 50rem) {
+    #about-container {
+        padding: 0.2rem 2rem;
+    }
+
+    #about-hero {
+        div {
+            width: 40%;
+        }
+    }
+
     .about-image {
         @include abstracts.grid(100%, 2);
+
+        #about-pizza {
+            width: 95%;
+            margin: 0;
+        }
+
+        #pizzaimg {
+            text-align: left;
+        }
     }
 }
-
