@@ -2,7 +2,7 @@
 
 //bild för hero-section
 .hero-section {
-    margin: 0;
+    margin: 0 auto;
     background-image: url("../images/pizza.png");
     background-size: cover;
     background-position: center;
@@ -12,11 +12,12 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    max-width: 1500px;
 }
 
 //container för rubrik, text och cta-knappar
 .index-container {
-    @include abstracts.textBox(90%, 1rem, 1rem auto 3rem, 0px 0px 10px 0px abstracts.$shadow, false);
+    @include abstracts.textBox(90%, 1rem, 1rem auto 3rem, 0px 0px 6px 0px abstracts.$green inset, false);
     background-color: rgba(0, 0, 0, 0.503);
     text-align: center;
     position: relative;
