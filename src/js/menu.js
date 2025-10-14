@@ -22,7 +22,7 @@ if (filterBtns.length > 0) {
 //fetch menu from API
 async function fetchMenu() {
     try {
-        const response = await fetch("http://127.0.0.1:3000/api/menu");
+        const response = await fetch("https://projekt-api-73oa.onrender.com/api/menu");
 
         if (response.ok) {
             const data = await response.json();

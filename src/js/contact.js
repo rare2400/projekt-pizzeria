@@ -55,7 +55,7 @@ async function createMessage(e) {
 
     //POST new message to API
     try {
-        const response = await fetch("http://127.0.0.1:3000/api/messages", {
+        const response = await fetch("https://projekt-api-73oa.onrender.com/api/messages", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
