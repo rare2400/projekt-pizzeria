@@ -21,9 +21,17 @@
     text-decoration: none;
 }
 
-#filter-btns button {
-    @include abstracts.button(abstracts.$red, abstracts.$light-text, 90%, 2.2rem, 0.2rem auto, 13rem, center, 0.8rem, false);
+#filter-btns {
+    button {
+        @include abstracts.button(abstracts.$red, abstracts.$light-text, 90%, 2.2rem, 0.2rem auto, 13rem, center, 0.8rem, false);
+    }
+
+    button.active {
+        background-color: darken(abstracts.$red, 25%);
+        transform: scale(1.1)
+    }
 }
+
 
 @media (min-width: 50rem) {
     #filter-btns button {

@@ -15,8 +15,17 @@ if (filterBtns.length > 0) {
     filterBtns.forEach(btn => {
         btn.addEventListener("click", () => {
             applyFilter(btn.dataset.category);
+
+            //activate style on clicked button
+            activateBtn(btn)
         });
     });
+}
+
+//add style on active button
+function activateBtn(activeBtn) {
+    filterBtns.forEach(btn => btn.classList.remove("active"));
+    activeBtn.classList.add("active");
 }
 
 //fetch menu from API
