@@ -6,7 +6,7 @@ Den använder HTML, JavaScript, Parcel och SASS (SCSS), samt är kopplad till en
 - Lista rätter i en meny
 - Skicka in meddelanden/frågor
 - SCSS för förbättrad struktur av CSS
-- Kommunicerar med API via `fetch`:
+- Kommunicerar med API via `fetch` tillsammans med `async/await` och `try/catch`:
 ```js
 async function fetchMenu() {
     try {
