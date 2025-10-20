@@ -34,6 +34,21 @@
         color: abstracts.$light-text;
         @extend %textShadow;
     }
+
+    p a {
+        color: abstracts.$light-text;
+        text-decoration: none;
+
+        &:hover {
+            @extend %hoverLink;
+        }
+    }
+
+    .phone {
+        width: 1.3rem;
+        vertical-align: -0.125em;
+        @extend %textShadow;
+    }
 }
 
 //kartan
