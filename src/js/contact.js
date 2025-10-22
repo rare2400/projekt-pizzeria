@@ -7,9 +7,10 @@ const checkbox = document.getElementById("number-checkbox");
 const phoneWrapper = document.getElementById("phone-wrapper");
 const phoneInput = document.getElementById("phoneNr");
 
-//toggle phone number input
+//eventlistener for checkbox
 checkbox.addEventListener("change", toggleInput);
 
+//toggle phone number input when checkbox is clicked
 function toggleInput() {
     if (checkbox.checked) {
         phoneWrapper.style.display = "block";
@@ -64,8 +65,6 @@ async function createMessage(e) {
         });
 
         if (response.ok) {
-            const data = await response.json();
-
             //message to user
             errorMsg.textContent = "Meddelandet är skickat! Vi återkommer vi e-post eller telefon så snart vi kan.";
 
@@ -73,12 +72,12 @@ async function createMessage(e) {
             form.reset();
 
         } else {
-            errorMsg.textContent = "Ett fel uppstod vid publiceringen av inlägget";
-            throw new Error("Dish creation failed");
+            errorMsg.textContent = "Ett fel uppstod när meddelandet skulle skickas.";
+            throw new Error("message creation failed");
         }
 
     } catch (error) {
-        console.log("Något blev fel när inlägget skapades:", error);
-        errorMsg.textContent = "Ett fel uppstod vid publiceringen av inlägget";
+        console.log("Något blev fel när meddelandet skulle skickas:", error);
+        errorMsg.textContent = "Ett fel uppstod när meddelandet skulle skickas.";
     }
 }
