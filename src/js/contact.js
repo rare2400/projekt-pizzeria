@@ -66,7 +66,7 @@ async function createMessage(e) {
 
         if (response.ok) {
             //message to user
-            errorMsg.textContent = "Meddelandet är skickat! Vi återkommer vi e-post eller telefon så snart vi kan.";
+            errorMsg.textContent = "Meddelandet är skickat! Vi återkommer via e-post eller telefon så snart vi kan.";
 
             //clear form
             form.reset();
