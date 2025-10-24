@@ -21,6 +21,11 @@
     p {
         margin: 1rem;
     }
+
+    #error-msg {
+        color: abstracts.$red;
+        padding: 0 1rem;
+    }
 }
 
 @media (min-width: 50rem) {
