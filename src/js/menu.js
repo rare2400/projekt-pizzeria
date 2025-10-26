@@ -103,9 +103,9 @@ function displayMenu(data) {
         "Italian Pizza",
         "Sallad",
         "Kebab",
-        "Hamburger",
-        "Sauce",
-        "Sides",
+        "Hamburgare",
+        "Såser",
+        "Tillbehör",
         "Dryck"
     ];
 
